@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.chou.easyspringboot</groupId>
-	<artifactId>easyspringboot-helloworld</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<name>easy-springboot-helloworld</name>
+	<artifactId>easy-springboot-easystarter</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>easy-springboot-easystarter</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -21,9 +21,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
