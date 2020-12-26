@@ -1,0 +1,8 @@
+jdbc:
+  account: zhangsan
+  pwd: 123456
+
+user:
+  name: zhangsan
+  sex: 男
+  homeUrl: www.xxx.com

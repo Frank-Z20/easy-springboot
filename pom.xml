@@ -13,6 +13,8 @@
     <modules>
         <module>easy-springboot-helloworld</module>
         <module>easy-springboot-easystarter</module>
+        <module>easy-springboot-dubbo</module>
+        <module>easy-springboot-readcfg</module>
     </modules>
 
     <properties>
