@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+    <form action="" th:each="user : ${userList}" >
+        姓名：<input name="name" th:value="${user.name}"/><br>
+        性别：<input type="text" name="sex" th:value="${user.sex}"/><br>
+        年龄：<input type="text" name="age" th:value="${user.age}"/><br>
+        住址：<input type="text" name="address" th:value="${user.address}"/>
+    </form>
+</body>
+</html>
