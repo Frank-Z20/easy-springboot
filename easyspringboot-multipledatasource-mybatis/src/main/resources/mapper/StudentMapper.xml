@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chou.easyspringboot.multipledatasource.mapper.ds1.StudentMapper">
+    <resultMap id="stuResultMap" type="com.chou.easyspringboot.multipledatasource.entity.Student">
+        <id column="id" jdbcType="VARCHAR" property="stuNum"></id>
+        <result column="name" jdbcType="VARCHAR" property="name"></result>
+        <result column="class" jdbcType="VARCHAR" property="className"></result>
+    </resultMap>
+
+    <select id="selectAllStudents" resultMap="stuResultMap">
+        select id, name, class from student;
+    </select>
+</mapper>
