@@ -55,7 +55,6 @@ public class Datasource1Configuration {
     }
 
     @Bean("sqlSessionFactory1")
-    @Primary
     public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource1") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
@@ -66,13 +65,11 @@ public class Datasource1Configuration {
     }
 
     @Bean("sqlSessionTemplate1")
-    @Primary
     public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory1") SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 
     @Bean("transactionManager1")
-    @Primary
     public DataSourceTransactionManager transactionManager(@Qualifier("dataSource1")DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
