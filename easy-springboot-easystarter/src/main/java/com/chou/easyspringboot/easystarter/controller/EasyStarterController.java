@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class EasyStarterController {
-    @GetMapping("/easystarter/test")
+    @GetMapping("/easystarter")
     public void test() {
         System.out.println("this is EasyStarterController");
     }
