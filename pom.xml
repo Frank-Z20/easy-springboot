@@ -15,6 +15,14 @@
         <module>easy-springboot-easystarter</module>
         <module>easy-springboot-dubbo</module>
         <module>easy-springboot-readcfg</module>
+        <module>easys-pringboot-exception</module>
+        <module>easy-springboot-filter</module>
+        <module>easy-springboot-interceptor</module>
+        <module>easy-springboot-listener</module>
+        <module>easy-springboot-logger</module>
+        <module>easy-springboot-multipledatasource-mybatis</module>
+        <module>easy-springboot-multipledatasource</module>
+        <module>easy-springboot-thymeleaf</module>
     </modules>
 
     <properties>
