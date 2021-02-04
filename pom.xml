@@ -20,9 +20,11 @@
         <module>easy-springboot-interceptor</module>
         <module>easy-springboot-listener</module>
         <module>easy-springboot-logger</module>
+        <module>easy-springboot-mybatis</module>
         <module>easy-springboot-multipledatasource-mybatis</module>
         <module>easy-springboot-multipledatasource</module>
         <module>easy-springboot-thymeleaf</module>
+        <module>easy-springboot-kafka</module>
     </modules>
 
     <properties>

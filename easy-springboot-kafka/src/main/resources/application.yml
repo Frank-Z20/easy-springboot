@@ -1,0 +1,43 @@
+server:
+  port: 8888
+
+spring:
+  kafka:
+    # kafka集群配置，多个时用逗号分隔
+    bootstrap-servers: 127.0.0.1:9092
+    # 生产者配置
+    producer:
+      # 发生错误时重试的次数
+      retries: 0
+      # 多个小时需要被发送到同一个分区时，生产者会把它们放到同一个批次里，该参数指定一个批次使用的内存大小，单位为字节
+      batch-size: 16384
+      # 生产者内存缓冲区大小
+      buffer-memory: 33554432
+      # 键和值的序列化方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # 应答级别:多少个分区副本备份完成时向生产者发送ack确认(可选0、1、all/-1)
+      acks: 1
+    # 消费者配置
+    consumer:
+      # 提交offset的延时
+      auto-commit-interval: 1S
+      # 是否自动提交偏移量，默认为true，为避免出现重复数据和数据丢失，设置为false，然后手动提交偏移量
+      enable-auto-commit: false
+      # 当kafka中没有初始offset或offset超出范围时将自动重置offset
+      # earliest:重置为分区中最小的offset;
+      # latest:重置为分区中最新的offset(消费分区中新产生的数据);
+      # none:只要有一个分区不存在已提交的offset,就抛出异常;
+      auto-offset-reset: earliest
+      # 键和值的反序列化方式
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+    # 监听器配置
+    listener:
+      # 监听器容器中运行的线程数
+      concurrency: 5
+      # listener负责ack，没调用一次立即ack
+      ack-mode: manual_immediate
+      # 监听的topic不存在时，项目启动会报错(关掉)
+      missing-topic-fatal: false
+
